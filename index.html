@@ -1,81 +1,123 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./index.css">
-  <script src="./index.js" defer></script>
-  <title>Frontend Mentor | Interactive rating component</title>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Overpass', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    background-color: hsl(216, 12%, 8%);
+}
+.container{
+    width: 410px;
+    height: 410px;
+    border-radius: 25px;
+    background-color: hwb(213 15% 78%);
+    margin: 7% auto;
+    padding: 20px 50px;
+}
+.icone{
+    background-color: hsl(216, 11%, 26%);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0px 30px 0px;
+}
+.titulo{
+    font-family: 'Overpass', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 15px;
+}
+.subTitulo{
+    font-size: 15px;
+    color: hsl(217, 12%, 63%);
+}
+.numeros{
+    color: hsl(216, 12%, 54%);
+    display: flex;
+    font-size: 15px;
+    padding: 25px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    background-color: hsl(216, 11%, 26%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+.number:hover{
+    background-color: hsl(25, 97%, 53%);
+    color:hsl(0, 0%, 100%);
+}
+.botao{
+    background-color: hsl(25, 97%, 53%);
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+    color: hsl(0, 0%, 100%);
+    transition: 0.3s;
+}
+.botao:hover{
+    background-color:hsl(0, 0%, 100%);
+    color: hsl(25, 97%, 53%);
+}
+.selecionado{
+    background-color: hsl(216, 12%, 54%);
+    color: hsl(0, 0%, 100%);
+}
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    /* AGRADECIMETOS */
 
-  <div class="container">
-      <!-- Rating state start -->
-      <div class="icone">
-        <img src="./images/icon-star.svg" alt="">
-      </div>
-    <div class="titulo">
-      How did we do?
-    </div>
-    <div class="subTitulo">
-      Please let us know how we did with your support request. All feedback is appreciated 
-      to help us improve our offering!
-    </div>
-    <div class="numeros">
-        <div class="number" id="um">
-          1
-        </div>
-        <div class="number" id="dois">
-          2
-        </div>
-        <div class="number" id="tres">
-          3
-        </div>
-        <div class="number" id="quatro">
-          4
-        </div>
-        <div class="number" id="cinco">
-          5
-        </div>
-    </div>
-    <div class="botao">
-      Submit
-    </div>
-  </div>
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-  <div class="agradecimento">
-    <div class="iconeDeAgradecimento">
-      <img src="./images/illustration-thank-you.svg" alt="">
-    </div>
-    <div class="display">You selected out of 5</div>
-    
-    <div class="tituloDeAgradecimento">
-      Thank you!
-    </div>
-    <div class="descricao">
-      We appreciate you taking the time to give a rating. If you ever need more support, 
-      don’t hesitate to get in touch!
-    </div>
-  </div>
-
-
-  <!-- Thank you state end -->
-
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
-</body>
-</html>
+.agradecimento{
+    width: 410px;
+    height: 410px;
+    border-radius: 25px;
+    background-color: hwb(213 15% 78%);
+    margin: auto;
+    padding: 20px 50px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.display{
+    background-color: hsl(216, 11%, 26%);
+    color: hsl(25, 97%, 53%);
+    padding: 10px;
+    border-radius: 25px;
+}
+.tituloDeAgradecimento{
+    font-family: 'Overpass', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 15px;
+}
+.descricao{
+    font-size: 15px;
+    color: hsl(217, 12%, 63%);
+    display: flex;
+}
+@media (max-width: 375px)
+{
+    body{
+        padding: 30px;
+    }
+}
