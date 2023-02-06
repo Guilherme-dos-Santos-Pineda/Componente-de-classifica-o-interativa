@@ -9,13 +9,14 @@ body{
     font-family: 'Overpass', sans-serif;
     font-weight: 400;
     font-size: 15px;
+    background-color: hsl(216, 12%, 8%);
 }
 .container{
     width: 410px;
     height: 410px;
     border-radius: 25px;
     background-color: hwb(213 15% 78%);
-    margin: auto;
+    margin: 7% auto;
     padding: 20px 50px;
 }
 .icone{
